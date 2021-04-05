@@ -5,8 +5,8 @@ namespace Contacts
 {
     public class ContactList
     {
-        private const string NUMBERS = "0-9";
-        private const string SHARP = "#";
+        private const string _numbers = "0-9";
+        private const string _sharp = "#";
 
         private readonly SortedDictionary<string, List<Contact>> _items = new SortedDictionary<string, List<Contact>>();
 
@@ -39,11 +39,11 @@ namespace Contacts
             }
             else if (char.IsDigit(contact.FullName[0]))
             {
-                Add(NUMBERS, contact);
+                Add(_numbers, contact);
             }
             else
             {
-                Add(SHARP, contact);
+                Add(_sharp, contact);
             }
         }
 
